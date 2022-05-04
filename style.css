@@ -1,14 +1,27 @@
-a{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    height: 1em;
+    background-color: #141414;
+    padding: 1em;
+}
+
+.selectors{
+    float: right;
+}
+
+a {
     text-decoration: none;
 }
 
 .text {
-    background-image: linear-gradient(
-        transparent 0%,
-        transparent 90%,
-        hotpink 90%,
-        hotpink 100%
-    );
+    background-image: linear-gradient(transparent 0%,
+            transparent 90%,
+            hotpink 90%,
+            hotpink 100%);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     background-position-x: right;
