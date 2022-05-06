@@ -12,18 +12,14 @@
 }
 
 .top {
-    height: 1em;
+    height: 1.25rem;
     background-color: #222222;
-    padding: 1em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;color: #F3F3F3;
+    height: 2rem;
+    padding: 0.25rem 3.25rem;
 }
-
-.top {
-    color: #F3F3F3;
-}
-
 
 
 .selector{
@@ -31,9 +27,9 @@
     border: none!important;
     -o-: none;
     outline: none;
-    font-size: 14px;
-    height: 30px;
-    padding: 5px;
+    font-size: 0.875rem;
+    height: 1.875rem;
+    padding: 0.3125rem;
     text-decoration: none;
     color: #F3F3F3;
 }
@@ -42,6 +38,10 @@
     color: #222222;
 }
 
-.selectors{
-    right: 5.07%;
+.navbar{
+    background-color: #F0A83E;
+    height: 62px;
+    left: 0px;
+    top: 20px;
+    display: flex;
 }
