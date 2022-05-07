@@ -11,6 +11,31 @@
     font-family: Roboto;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 90%,
+        white 90%,
+        white 100%
+    );
+
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+
+    transition: background-size 300ms;
+}
+
+.btn:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
 .top {
     height: 1.25rem;
     background-color: #222222;
@@ -40,8 +65,30 @@
 
 .navbar{
     background-color: #F0A83E;
-    height: 62px;
-    left: 0px;
-    top: 20px;
+    height: 3.875rem;
+    left: 0rem;
+    top: 1.25rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo {
+    height: 1.4375rem;
+    width: 10.3987rem;
+    margin-left: 2.5rem;
+}
+
+.links{
+    display: flex;
+    list-style-image: url("svg/pawprint.svg");
+    margin-right: 3.125rem;
+    color: white;
+}
+
+.links li{
+    margin: 0rem 1.25rem;
+}
+
+
+
