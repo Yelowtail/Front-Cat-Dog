@@ -232,6 +232,10 @@ a {
       align-items: center;
   }
 
+  .container p{
+      background-color: transparent;
+  }
+
   .btncomederos{
       margin-right: 0px;
   }
