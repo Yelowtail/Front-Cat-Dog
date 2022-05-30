@@ -1,41 +1,25 @@
 @font-face {
-  font-family: Roboto;
+  font-family: Roboto-R;
   src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-M;
+  src: url(fonts/Roboto-Medium.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: Roboto-R;
 }
 
 a {
   text-decoration: none;
 }
 
-
 /*Top--------------------------------------------------------------*/
-
-.btn {
-  background-image: linear-gradient(
-    transparent 0%,
-    transparent 90%,
-    white 90%,
-    white 100%
-  );
-
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-position-x: right;
-
-  transition: background-size 300ms;
-}
-
-.btn:hover {
-  background-size: 100% 100%;
-  background-position-x: left;
-}
 
 .top {
   height: 1.25rem;
@@ -67,6 +51,27 @@ a {
 /*end top----------------------------------------------------------*/
 
 /*Navbar-----------------------------------------------------------*/
+
+.btn {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    white 90%,
+    white 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+
+  transition: background-size 300ms;
+}
+
+.btn:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +130,7 @@ a {
 /*Header ----------------------------------------------------------*/
 .header {
   width: 100%;
-  height: 410px;
+  height: 25.625rem;
   display: flex;
   position: relative;
   overflow-x: hidden;
@@ -144,16 +149,15 @@ a {
   align-items: flex-end;
   justify-items: center;
   margin-right: 0.9375rem;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
-.container h1 , .container p{
+.container h1,
+.container p {
   background-color: white;
   padding: 0.625rem;
   border-radius: 0.3125rem;
 }
-
-
 
 /*boton de comederos*/
 .btncomederos {
@@ -177,7 +181,7 @@ a {
   right: 100%;
   left: 0;
   background: white;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   transition: all 0.5s;
   z-index: 0;
 }
@@ -195,18 +199,111 @@ a {
 /*end header-----------------------------------------*/
 
 /* main ----------------------------------------------- */
-.paw-print{
+.paw-print {
   color: #f0a83e;
-  size: 67px 71px;
+  width: 4.4375rem;
+  height: 4.3125rem;
+  margin-top: 10px;
+}
+
+.main,
+.productos,
+.titulo,
+.formulario,
+.contact,
+.prod-dest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo h1 {
+  color: #3c2313;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.categorias {
+  display: flex;
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.categorias p:not(:last-child)::after {
+  content: "-";
+  margin: 0px 13px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  gap: 50px;
+  justify-items: center;
+  color: white;
+  margin: 1.875rem 0rem;
+}
+
+.card {
+  padding: auto;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+
+.card-content {
+  min-width: 18.75rem;
+  background: #efefef;
+  color: black;
+  margin: 0.625rem auto;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0.0625rem 0.0625rem 1.875rem #0005,
+    -0.0625rem -0.0625rem 1.875rem #0005;
+  transition: 0.3s all ease-in-out;
+}
+
+.card-content img {
+  width: 16.5625rem;
+}
+
+.card-content:hover {
+  transform: translateY(-0.625rem);
+}
+
+.card-info {
+  color: #3c2313;
+  font-family: Roboto-M;
+}
+
+.card-price {
+  font-family: Roboto-M;
+  color: #f0a83e;
+}
+
+.card-btn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: #f0a83e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin: 50px auto;
 }
 /* end main ------------------------------------------ */
 
-@media screen and (min-width: 760px) {
-    /* top */
-    .top{
-        display: flex;
-    }
-    /* end top */
+@media screen and (min-width: 47.5rem) {
+  /* top */
+  .top {
+    display: flex;
+  }
+  /* end top */
   /*navbar ------------------------------*/
   .navbar label {
     display: none;
@@ -237,15 +334,26 @@ a {
   }
 
   .container {
-      align-items: center;
+    align-items: center;
   }
 
-  .container p{
-      background-color: transparent;
+  .container p {
+    background-color: transparent;
   }
 
-  .btncomederos{
-      margin-right: 0px;
+  .btncomederos {
+    margin-right: 0rem;
   }
   /*end header ----------------------------------------------*/
+
+  /* main --------------------------------------------------- */
+  .prod-dest {
+    flex-direction: row;
+    gap: 0.3125rem;
+  }
+
+  .card-container{
+    flex-direction: row;
+  }
+  /* end main -------------------------------------------- */
 }
