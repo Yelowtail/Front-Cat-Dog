@@ -1,0 +1,392 @@
+@font-face {
+  font-family: Roboto-R;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-M;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto-R;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Top--------------------------------------------------------------*/
+
+.top {
+  height: 1.25rem;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f3f3f3;
+  height: 2rem;
+  padding: 0.25rem 3.25rem;
+  display: none;
+}
+
+.selector {
+  background: transparent;
+  border: none !important;
+  -o-: none;
+  outline: none;
+  font-size: 0.875rem;
+  height: 1.875rem;
+  padding: 0.3125rem;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.selector option {
+  color: #222222;
+}
+/*end top----------------------------------------------------------*/
+
+/*Navbar-----------------------------------------------------------*/
+
+.btn {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    white 90%,
+    white 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+
+  transition: background-size 300ms;
+}
+
+.btn:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0a83e;
+  padding: 0.9375rem;
+  padding-right: 1.875rem;
+}
+
+.navbar a {
+  color: inherit;
+}
+
+.logo {
+  height: 1.4375rem;
+  width: 10.3987rem;
+  margin-left: 2.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5625rem;
+  pad: 1.25rem;
+  padding-top: 1.5625rem;
+  list-style-image: url("../svg/pawprint.svg");
+  color: white;
+}
+
+.links li {
+  margin: 0rem 1.25rem;
+}
+
+.menu {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.navbar label {
+  cursor: pointer;
+  color: white;
+}
+
+#toggler {
+  display: none;
+}
+
+#toggler:checked ~ .menu {
+  max-height: 100%;
+}
+/*end navbar ------------------------------------------------------*/
+
+/*Header ----------------------------------------------------------*/
+.header {
+  width: 100%;
+  height: 25.625rem;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  background-image: url("../svg/bowl-and-pet-daities-on-green-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #3c2313;
+  align-items: flex-end;
+  justify-items: center;
+  margin-right: 0.9375rem;
+  gap: 0.75rem;
+}
+
+.container h1,
+.container p {
+  background-color: white;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+}
+
+/*boton de comederos*/
+.btncomederos {
+  position: relative;
+  background-color: #f0a83e;
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  margin-right: 2.75rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btncomederos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: white;
+  border-radius: 0.625rem;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.btncomederos:hover {
+  color: #f0a83e;
+}
+
+.btncomederos:hover::before {
+  content: "";
+  z-index: -1;
+  right: 0;
+}
+/*end boton de comederos*/
+/*end header-----------------------------------------*/
+
+/* main ----------------------------------------------- */
+.paw-print {
+  color: #f0a83e;
+  width: 4.4375rem;
+  height: 4.3125rem;
+  margin-top: 10px;
+}
+
+.main,
+.productos,
+.titulo,
+.formulario,
+.contact,
+.prod-dest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo h1 {
+  color: #3c2313;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.categorias {
+  display: flex;
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.categorias p:not(:last-child)::after {
+  content: "-";
+  margin: 0px 13px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  gap: 50px;
+  justify-items: center;
+  color: white;
+  margin: 1.875rem 0rem;
+}
+
+.card {
+  padding: auto;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+
+.card-content {
+  min-width: 18.75rem;
+  background: #efefef;
+  color: black;
+  margin: 0.625rem auto;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0.0625rem 0.0625rem 1.875rem #0005,
+    -0.0625rem -0.0625rem 1.875rem #0005;
+  transition: 0.3s all ease-in-out;
+}
+
+.card-content img {
+  width: 16.5625rem;
+}
+
+.card-content:hover {
+  transform: translateY(-0.625rem);
+}
+
+.card-info {
+  color: #3c2313;
+  font-family: Roboto-M;
+}
+
+.card-price {
+  font-family: Roboto-M;
+  color: #f0a83e;
+}
+
+.card-btn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: #f0a83e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin: 50px auto;
+}
+
+.contact{
+  gap: 30px;
+}
+
+.formulario h2{
+  color: #3c2313;
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.btns-form{
+  display: flex;
+  gap: 10px;
+}
+
+.btns-form input[type="button"]{
+  border-radius: 15px;
+  border-style: none;
+  width: 110px;
+  height: 34px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.enviar{
+  background-color: #f0a83e;
+}
+
+.reiniciar{
+  background-color: #8A8787;
+}
+/* end main ------------------------------------------ */
+
+@media screen and (min-width: 47.5rem) {
+  /* top */
+  .top {
+    display: flex;
+  }
+  /* end top */
+  /*navbar ------------------------------*/
+  .navbar label {
+    display: none;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    overflow: visible;
+    width: auto;
+    max-height: 100%;
+  }
+
+  .links {
+    flex-direction: row;
+    padding-top: 0;
+    align-self: flex-end;
+  }
+  /*end navbar ----------------------------------------------*/
+
+  /*Header --------------------------------------------------*/
+  .header {
+    justify-content: flex-end;
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  .container p {
+    background-color: transparent;
+  }
+
+  .btncomederos {
+    margin-right: 0rem;
+  }
+  /*end header ----------------------------------------------*/
+
+  /* main --------------------------------------------------- */
+  .prod-dest {
+    flex-direction: row;
+    gap: 0.3125rem;
+  }
+
+  .card-container{
+    flex-direction: row;
+  }
+  /* end main -------------------------------------------- */
+}
