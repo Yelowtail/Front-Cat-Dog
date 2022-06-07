@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/input-style.css">
   <title>Figma Santander</title>
 </head>
 
@@ -97,14 +98,42 @@
     <section class="formulario">
       <h2>Contactanos</h2>
       <form action="#" class="contact">
-        <input type="text" name="name" id="name" placeholder="Nombre y Apellido">
-        <input type="email" name="mail" id="mail" placeholder="Email">
-        <input type="number" name="phone" id="phone" placeholder="Telefono">
-        <input type="button" value="Reiniciar">
-        <input type="button" value="Enviar">
+
+        <div class="input-container">
+          <input class="effect-input" type="text" placeholder="">
+          <label>Nombre y Apellido</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+        
+        <div class="input-container">
+          <input class="effect-input" type="text" placeholder="">
+          <label>Correo Electronico</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+
+        <div class="input-container">
+          <input class="effect-input" type="text" placeholder="">
+          <label>Telefono</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+
+        
+
+        <div class="btns-form">
+          <input class="reiniciar" type="button" value="Reiniciar">
+          <input class="enviar" type="button" value="Enviar">
+        </div>
       </form>
     </section>
   </main>
+
+  <script src="scripts/input.js"></script>
 </body>
 
 </html>
