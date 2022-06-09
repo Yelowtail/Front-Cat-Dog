@@ -413,7 +413,7 @@ footer{
 
 .subscription.done .submit-email {
   width: calc(100% - 2px);
-  background: #f0a83e;
+  background: white;
 }
 
 .subscription .submit-email .before-submit,
@@ -436,6 +436,8 @@ footer{
 
 .subscription .submit-email .after-submit {
   transition-delay: 0.35s;
+  color: #f0a83e;
+  font-weight: 900;
 }
 
 .subscription:not(.done) .submit-email .before-submit,
