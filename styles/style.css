@@ -307,6 +307,57 @@ a {
   margin-bottom: 20px;
 }
 
+input[type="text"] {
+  color: white;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  cursor: text;
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+.input-container {
+  width: 298px;
+  position: relative;
+  border-radius: 15px;
+  background-color: #3c2313;
+  z-index: 1;
+}
+
+.effect-input {
+  border-style: none;
+  padding: 7px 14px;
+  transition: 0.4s;
+  border-radius: 15px;
+  background: transparent;
+}
+
+.effect-input ~ label {
+  position: absolute;
+  left: 14px;
+  width: 100%;
+  top: 18px;
+  color: white;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.effect-input:focus ~ label,
+.has-content.effect-input ~ label {
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  color: #3c2313;
+  transition: 0.3s;
+}
+
 .btns-form {
   display: flex;
   gap: 10px;
@@ -315,8 +366,8 @@ a {
 .btns-form input[type="button"] {
   border-radius: 15px;
   border-style: none;
-  width: 110px;
-  height: 34px;
+  width: 200px;
+  height: 45px;
   margin: 5px;
   cursor: pointer;
   color: white;
@@ -324,25 +375,33 @@ a {
 
 .enviar {
   background-color: #f0a83e;
+  
 }
 
 .reiniciar {
   background-color: #8a8787;
 }
+
+.enviar:hover, .reiniciar:hover{
+  transform: translate(-2px,-2px);
+  box-shadow: 2px 2px 2px #0005;
+}
 /* end main ------------------------------------------ */
 
 /* footer ------------------------------------------------ */
-footer{
+footer {
   margin-top: 75px;
 }
 
 .susc-container {
   background-color: #f0a83e;
   width: 100%;
-  height: 60px;
+  height: 101px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .correo {
@@ -355,11 +414,7 @@ footer{
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 23px;
-}
-
-.container-2 {
-  margin-right: 47px;
+  /* margin-left: 23px; */
 }
 
 .texto-suscripcion {
@@ -445,6 +500,55 @@ footer{
   visibility: visible;
   opacity: 1;
 }
+
+.info-section{
+  display: flex;
+  height: 301px;
+  background-color: #3c2313;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-footer{
+  margin-top: 10px;
+  width: 134px;
+  height: 18px;
+}
+
+.container-4{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location, .telefono, .correo-electronico{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: white;
+}
+
+.cont-text .title{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cont-text .text{
+  color: #8a8787;
+  font-size: 13px;
+}
+
+.derechos{
+  width: 100%;
+  height: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* end footer --------------------------------------------- */
 @media screen and (min-width: 47.5rem) {
   /* top */
@@ -503,5 +607,44 @@ footer{
   .card-container {
     flex-direction: row;
   }
+
+  .btns-form input[type="button"] {
+    width: 110px;
+    height: 34px;
+  }
+
+  .input-container{
+    width: 340px;
+  }
   /* end main -------------------------------------------- */
+
+  /* suscripcion ------------------------------------------- */
+  .susc-container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .container-1 {
+    margin-left: 23px;
+  }
+
+  .container-2 {
+    margin-right: 47px;
+  }
+
+  /* end suscripcion --------------------------------------------*/
+
+  /* footer ------------------------------------------------ */
+  .info-section{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 70px;
+  }
+
+  .logo-footer{
+    width: 166px;
+    height: 23px;
+  }
+  /* end footer ---------------------------------------------- */
 }
