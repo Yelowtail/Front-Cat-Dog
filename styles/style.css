@@ -1,0 +1,650 @@
+@font-face {
+  font-family: Roboto-R;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-M;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto-R;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Top--------------------------------------------------------------*/
+
+.top {
+  height: 1.25rem;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f3f3f3;
+  height: 2rem;
+  padding: 0.25rem 3.25rem;
+  display: none;
+}
+
+.selector {
+  background: transparent;
+  border: none !important;
+  -o-: none;
+  outline: none;
+  font-size: 0.875rem;
+  height: 1.875rem;
+  padding: 0.3125rem;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.selector option {
+  color: #222222;
+}
+/*end top----------------------------------------------------------*/
+
+/*Navbar-----------------------------------------------------------*/
+
+.btn {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    white 90%,
+    white 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+
+  transition: background-size 300ms;
+}
+
+.btn:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0a83e;
+  padding: 0.9375rem;
+  padding-right: 1.875rem;
+}
+
+.navbar a {
+  color: inherit;
+}
+
+.logo {
+  height: 1.4375rem;
+  width: 10.3987rem;
+  margin-left: 2.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5625rem;
+  pad: 1.25rem;
+  padding-top: 1.5625rem;
+  list-style-image: url("../svg/pawprint.svg");
+  color: white;
+}
+
+.links li {
+  margin: 0rem 1.25rem;
+}
+
+.menu {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.navbar label {
+  cursor: pointer;
+  color: white;
+}
+
+#toggler {
+  display: none;
+}
+
+#toggler:checked ~ .menu {
+  max-height: 100%;
+}
+/*end navbar ------------------------------------------------------*/
+
+/*Header ----------------------------------------------------------*/
+.header {
+  width: 100%;
+  height: 25.625rem;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  background-image: url("../svg/bowl-and-pet-daities-on-green-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #3c2313;
+  align-items: flex-end;
+  justify-items: center;
+  margin-right: 0.9375rem;
+  gap: 0.75rem;
+}
+
+.container h1,
+.container p {
+  background-color: white;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+}
+
+/*boton de comederos*/
+.btncomederos {
+  position: relative;
+  background-color: #f0a83e;
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  margin-right: 2.75rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btncomederos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: white;
+  border-radius: 0.625rem;
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+.btncomederos:hover {
+  color: #f0a83e;
+}
+
+.btncomederos:hover::before {
+  content: "";
+  z-index: -1;
+  right: 0;
+}
+/*end boton de comederos*/
+/*end header-----------------------------------------*/
+
+/* main ----------------------------------------------- */
+.paw-print {
+  color: #f0a83e;
+  width: 4.4375rem;
+  height: 4.3125rem;
+  margin-top: 10px;
+}
+
+.main,
+.productos,
+.titulo,
+.formulario,
+.contact,
+.prod-dest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo h1 {
+  color: #3c2313;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.categorias {
+  display: flex;
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+.categorias p:not(:last-child)::after {
+  content: "-";
+  margin: 0px 13px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  gap: 50px;
+  justify-items: center;
+  color: white;
+  margin: 1.875rem 0rem;
+}
+
+.card {
+  padding: auto;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+
+.card-content {
+  min-width: 18.75rem;
+  background: #efefef;
+  color: black;
+  margin: 0.625rem auto;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0.0625rem 0.0625rem 1.875rem #0005,
+    -0.0625rem -0.0625rem 1.875rem #0005;
+  transition: 0.3s all ease-in-out;
+}
+
+.card-content img {
+  width: 16.5625rem;
+}
+
+.card-content:hover {
+  transform: translateY(-0.625rem);
+}
+
+.card-info {
+  color: #3c2313;
+  font-family: Roboto-M;
+}
+
+.card-price {
+  font-family: Roboto-M;
+  color: #f0a83e;
+}
+
+.card-btn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: #f0a83e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin: 50px auto;
+}
+
+.contact {
+  gap: 30px;
+}
+
+.formulario h2 {
+  color: #3c2313;
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  color: white;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  cursor: text;
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+.input-container {
+  width: 298px;
+  position: relative;
+  border-radius: 15px;
+  background-color: #3c2313;
+  z-index: 1;
+}
+
+.effect-input {
+  border-style: none;
+  padding: 7px 14px;
+  transition: 0.4s;
+  border-radius: 15px;
+  background: transparent;
+}
+
+.effect-input ~ label {
+  position: absolute;
+  left: 14px;
+  width: 100%;
+  top: 18px;
+  color: white;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.effect-input:focus ~ label,
+.has-content.effect-input ~ label {
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  color: #3c2313;
+  transition: 0.3s;
+}
+
+.btns-form {
+  display: flex;
+  gap: 10px;
+}
+
+.btns-form input[type="button"] {
+  border-radius: 15px;
+  border-style: none;
+  width: 200px;
+  height: 45px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.enviar {
+  background-color: #f0a83e;
+  
+}
+
+.reiniciar {
+  background-color: #8a8787;
+}
+
+.enviar:hover, .reiniciar:hover{
+  transform: translate(-2px,-2px);
+  box-shadow: 2px 2px 2px #0005;
+}
+/* end main ------------------------------------------ */
+
+/* footer ------------------------------------------------ */
+footer {
+  margin-top: 75px;
+}
+
+.susc-container {
+  background-color: #f0a83e;
+  width: 100%;
+  height: 101px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.correo {
+  background-image: url(../svg/correo.svg);
+  width: 40px;
+  height: 40px;
+}
+
+.container-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-left: 23px; */
+}
+
+.texto-suscripcion {
+  position: relative;
+  left: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.content {
+  width: 330px;
+  height: 40px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.subscription {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.subscription .add-email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.subscription .submit-email {
+  position: absolute;
+  right: 0;
+  height: calc(100% - 2px);
+  width: 130px;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  margin: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+  background: #3c2313;
+  color: #ffffff;
+  transition: width 0.35s ease-in-out, background 0.35s ease-in-out;
+}
+
+.subscription.done .submit-email {
+  width: calc(100% - 2px);
+  background: white;
+}
+
+.subscription .submit-email .before-submit,
+.subscription .submit-email .after-submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 38px;
+  transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out;
+}
+
+.subscription.done .submit-email .before-submit,
+.subscription:not(.done) .submit-email .after-submit {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.subscription .submit-email .after-submit {
+  transition-delay: 0.35s;
+  color: #f0a83e;
+  font-weight: 900;
+}
+
+.subscription:not(.done) .submit-email .before-submit,
+.subscription.done .submit-email .after-submit {
+  visibility: visible;
+  opacity: 1;
+}
+
+.info-section{
+  display: flex;
+  height: 301px;
+  background-color: #3c2313;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-footer{
+  margin-top: 10px;
+  width: 134px;
+  height: 18px;
+}
+
+.container-4{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location, .telefono, .correo-electronico{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: white;
+}
+
+.cont-text .title{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cont-text .text{
+  color: #8a8787;
+  font-size: 13px;
+}
+
+.derechos{
+  width: 100%;
+  height: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* end footer --------------------------------------------- */
+@media screen and (min-width: 47.5rem) {
+  /* top */
+  .top {
+    display: flex;
+  }
+  /* end top */
+  /*navbar ------------------------------*/
+  .navbar label {
+    display: none;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    overflow: visible;
+    width: auto;
+    max-height: 100%;
+  }
+
+  .links {
+    flex-direction: row;
+    padding-top: 0;
+    align-self: flex-end;
+  }
+  /*end navbar ----------------------------------------------*/
+
+  /*Header --------------------------------------------------*/
+  .header {
+    justify-content: flex-end;
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  .container p {
+    background-color: transparent;
+  }
+
+  .btncomederos {
+    margin-right: 0rem;
+  }
+  /*end header ----------------------------------------------*/
+
+  /* main --------------------------------------------------- */
+  .prod-dest {
+    flex-direction: row;
+    gap: 0.3125rem;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .btns-form input[type="button"] {
+    width: 110px;
+    height: 34px;
+  }
+
+  .input-container{
+    width: 340px;
+  }
+  /* end main -------------------------------------------- */
+
+  /* suscripcion ------------------------------------------- */
+  .susc-container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .container-1 {
+    margin-left: 23px;
+  }
+
+  .container-2 {
+    margin-right: 47px;
+  }
+
+  /* end suscripcion --------------------------------------------*/
+
+  /* footer ------------------------------------------------ */
+  .info-section{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 70px;
+  }
+
+  .logo-footer{
+    width: 166px;
+    height: 23px;
+  }
+  /* end footer ---------------------------------------------- */
+}

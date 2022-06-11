@@ -1,0 +1,53 @@
+input[type="text"] {
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  cursor: text;
+  z-index: 2;
+  height: 50px;
+  width: 340px;
+}
+
+:focus {
+    outline: none;
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  background-color: #3C2313;
+  z-index: 1;
+}
+
+.effect-input {
+  border-style: none;
+  padding: 7px 14px;
+  transition: 0.4s;
+  border-radius: 15px;
+  background: transparent;
+}
+
+
+.effect-input ~ label {
+  position: absolute;
+  left: 14px;
+  width: 100%;
+  top: 18px;
+  color: white;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.effect-input:focus ~ label,
+.has-content.effect-input ~ label {
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  color: #3C2313;
+  transition: 0.3s;
+}
+
